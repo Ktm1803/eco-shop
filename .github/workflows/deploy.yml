@@ -32,7 +32,7 @@ jobs:
         run: "yarn install"
 
       - name: Build step
-        run: "npm run build"
+        run: "npm run dev"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
@@ -40,5 +40,5 @@ jobs:
           project: "ktm1803-eco-shop-15"
           entrypoint: "jsr:@deno/nextjs-start"
           root: "."
-          include: .next, public
+          
           
